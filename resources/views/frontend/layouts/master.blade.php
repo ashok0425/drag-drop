@@ -20,5 +20,14 @@
     @include('frontend.layouts.footer')
 
     @stack('script')
+    <script>
+        // redirect if login 
+        if (sessionStorage.getItem('token')) {
+                document.querySelector('.login').classList.add('d-none')
+                document.querySelector('.logout').classList.remove('d-none')
+                document.querySelector('.logout').classList.add('d-block')
+
+            }
+    </script>
 </body>
 </html>
