@@ -11,6 +11,7 @@ class HomeController extends Controller
      */
     public function __invoke(Request $request)
     {
-       return view('frontend.index');
+        $cities=config('city');
+       return view('frontend.index',compact('cities'));
     }
 }
